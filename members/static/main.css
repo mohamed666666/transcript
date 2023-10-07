@@ -1,0 +1,236 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  font-size: 22px;
+}
+
+body.night-mode {
+  background-color: #000000;
+  color: #000000;
+  transition: 1s;
+  font-size: 22px;
+}
+
+body.night-mode .container {
+  background-color: #222222; /* Change the container's background color for night mode */
+  transition: 1.5s;
+  font-size: 22px;
+}
+
+/* Text color in night mode */
+body.night-mode label { /* Add selector for transcription text */
+  color: #ffffff; /* Change text color to white in night mode */
+}
+
+body.night-mode h2 {
+  color: #ffffff; /* Change text color for the title in night mode */
+  text-align: center;
+}
+
+body.night-mode #transcription-text,
+body.night-mode #translation-text {
+  color: #000000; /* Change text color for text areas in night mode */
+}
+
+/* Reduce padding for mobile screens */
+#nightModeButton {
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+h2 {
+  color: #333;
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#transcription-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: 200px; /* Set a fixed height */
+  white-space: nowrap;
+  overflow-x: scroll; /* Enable horizontal scrollbar when content overflows horizontally */
+  overflow-y: scroll; /* Enable both horizontal and vertical scrollbars when content overflows */
+}
+#translation-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: 200px; /* Set a fixed height */
+  overflow-x: auto; /* Enable horizontal scrollbar when content overflows horizontally */
+  overflow-y: auto; /* Enable both horizontal and vertical scrollbars when content overflows */
+}
+
+
+#transcription-text {
+  font-size: 25px;
+  color: #000000;
+  text-align:left;
+}
+
+#translation-text {
+  font-size: 25px;
+  color: #000000;
+  text-align:left;
+}
+
+/* Style for dropdown container */
+.select-container {
+  margin-top: 10px;
+}
+
+/* Style for dropdown labels */
+label {
+  font-weight: bold;
+}
+
+/* Style for dropdowns */
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Style for the file upload button */
+#file-upload {
+  display: none; /* Hide the default file input */
+}
+
+#transcribe-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#nightModeButton {
+  width: 70px;
+  height: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  background-image: url('https://lh4.googleusercontent.com/4ShOuhPIrlvADdg1wgEDKdqUypvTbdgOH3ZHOaB6YOGQSUSMNoJZd8I6pCYU5aG_5m0Td3BV8qPmZiD1m5IGuQPVgVhIDAAiTidD-gI1QZMmfivG4Gc6iM5c9MoOVlFK-JfCfe9W');
+  background-size: cover;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#upload-file:hover {
+  background-color: #0056b3; /* Darker shade of the primary color on hover */
+}
+
+#file-transcription {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: 200px; /* Set a fixed height */
+  white-space: nowrap;
+  overflow-x: scroll; /* Enable horizontal scrollbar when content overflows horizontally */
+  overflow-y: scroll; /* Enable both horizontal and vertical scrollbars when content overflows */
+}
+
+/* Style for the media upload button */
+#media-upload-label {
+  display: block;
+  font-size: 18px;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style to hide the file input */
+#media-upload-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Style for the media player container */
+#media-player-container {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Style for the media player */
+#media-player {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  background-color: #333;
+  text-align: center;
+}
+
+/* Style for the play/pause and stop buttons */
+#play-pause-button, #stop-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#play-pause-button:disabled, #stop-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

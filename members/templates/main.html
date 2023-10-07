@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognition</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'Sharawy.png' %}">
+</head>
+<body>
+    <button id="nightModeButton">
+        <span><i class="fa-solid fa-moon"></i></span>
+    </button>
+    <div class="container">
+    	<!-- <button id="logout-button">Logout</button>-->
+	    <h2 style="text-align: center;">Speech Recognition</h2>
+		<!-- Upload Audio/Video -->
+		<label for="media-upload" id="media-upload-label" style="text-align: left;">Upload Media</label>
+		<input type="file" id="media-upload" accept=".wav, .mp3, .mp4" style="display: none;">
+		<div id="media-player-container" style="text-align: center;">
+			<video id="media-player" controls style="text-align: center;">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<br>
+	    <!-- Source Language Dropdown -->
+	    <label for="source">Source Language:</label>
+	    <select id="source">
+	        <option value="en-US">English</option>
+	        <option value="es-ES">Spanish</option>
+	        <option value="it-IT">Italian</option>
+	        <option value="ar-EG">Arabic</option>
+	    </select>
+
+	    <!-- Start Recording Button -->
+	    <button id="start-record" style="text-align: center;">Start Recording</button>
+	    <!-- Stop Recording Button -->
+	    <button id="stop-record" disabled style="text-align: center;">Stop Recording</button>
+	    <div id="transcription-container">
+	        <p id="transcription-text">Transcription will appear here.</p>
+	    </div>
+	    <br>
+	    <br>
+	    <!-- Target Language Dropdown -->
+		<label for="target">Target Language:</label>
+		<select id="target">
+		    <option value="en">English</option>
+		    <option value="es">Spanish</option>
+		    <option value="it">Italian</option>
+		    <option value="ar">Arabic</option>
+		</select>
+		<div id="translation-container">
+	        <p id="translation-text">Translation will appear here.</p>
+	    </div>
+	    <br>
+	    <br>
+	    <input type="file" id="file-upload" accept=".wav, .mp3, .mp4" style="display: none;">
+		<button id="transcribe-button">Upload</button>
+		<div id="file-transcription">Transcription will appear here.</div>
+		<!-- Include CSRF token (for future use) -->
+        <form method="post" id="csrf-form">
+            {% csrf_token %}
+        </form>
+
+	</div>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
