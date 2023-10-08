@@ -130,13 +130,6 @@ USE_TZ = True
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 
-APPS_DIR = os.path.join(BASE_DIR.parent,'nginx/')
-
-
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-MEDIA_URL='/media/'
-
-
 
 STATIC_URL = "/static/"
 # Note: Replace 'supersecure.codes' with your domain
