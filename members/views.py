@@ -101,7 +101,7 @@ def transcribe_audio(request):
             # Load the Whisper model
             BASE_DIR = Path(__file__).resolve().parent.parent
             #model = whisper.load_model(BASE_DIR / 'members' / 'whisper1' / 'small.pt')
-            model = whisper.load_model('tiny')
+            model = whisper.load_model('small')
 
             # Transcribe the audio using the Whisper model
             result = model.transcribe(temp_audio.name)
