@@ -29,7 +29,7 @@ def translate_text(request):
     if request.method == 'POST':
         text = request.POST.get('text', '')
         target_language = request.POST.get('target_language', 'en')  # Default to English
-        print(text)
+       
         try:
             translator = Translator()
             
