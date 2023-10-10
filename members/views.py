@@ -28,13 +28,13 @@ def main(request, first_name=None, last_name=None, id=None):
 def translate_text(request):
     if request.method == 'POST':
         text = request.POST.get('text', '')
-        target_language = request.POST.get('target_language', 'en')  # Default to English
+        target_language = request.POST.get('target_language', 'en') # Default to English
         
         try:
             translator = Translator()
             
             translated_text =  translator.translate(text, dest=target_language)
-            print(translated_text)
+            print(translated_text.text)
             
             return JsonResponse({'translated_text': translated_text.text})
         except Exception as e:
