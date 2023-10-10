@@ -146,6 +146,7 @@ WHISPER_MODEL_PATH = r'small'
 VOSK_MODEL_PATH = BASE_DIR / 'members'
 
 ASGI_APPLICATION = 'audio.routing.application'
+CSRF_TRUSTED_ORIGINS = ['znexxt.tk']
 # Configure CORS for WebSocket
 CORS_ALLOW_HEADERS = [
     'accept',
