@@ -34,9 +34,9 @@ def translate_text(request):
             translator = Translator()
             
             translated_text =  translator.translate(text, dest=target_language)
-            print(translated_text.text)
-            
-            return JsonResponse({'translated_text': translated_text.text})
+           
+            res=JsonResponse({'translated_text': translated_text.text})
+            return res
         except Exception as e:
             # Handle the exception and return an error JSON response
             return JsonResponse({'error': f'Translation error: {str(e)}'}, status=500)
