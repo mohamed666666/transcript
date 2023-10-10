@@ -34,6 +34,7 @@ def translate_text(request):
             translator = Translator()
             
             translated_text =  translator.translate(text, dest=target_language)
+            print(translated_text)
             
             return JsonResponse({'translated_text': translated_text.text})
         except Exception as e:
