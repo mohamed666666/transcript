@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)7#p4u&uuuj##9_2(6#y&=cfi8t(n)_un7#q2_%zy5ts-!95+0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*',"54.160.52.43","znexxt.tk"]
 
@@ -146,7 +146,6 @@ WHISPER_MODEL_PATH = r'small'
 VOSK_MODEL_PATH = BASE_DIR / 'members'
 
 ASGI_APPLICATION = 'audio.routing.application'
-
 # Configure CORS for WebSocket
 CORS_ALLOW_HEADERS = [
     'accept',

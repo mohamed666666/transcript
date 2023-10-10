@@ -29,11 +29,11 @@ def translate_text(request):
     if request.method == 'POST':
         text = request.POST.get('text', '')
         target_language = request.POST.get('target_language', 'en')  # Default to English
-       
+        
         try:
             translator = Translator()
             
-            translated_text = translator.translate(text, dest=target_language)
+            translated_text =  translator.translate(text, dest=target_language)
             
             return JsonResponse({'translated_text': translated_text.text})
         except Exception as e:

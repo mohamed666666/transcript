@@ -60,7 +60,7 @@ targetLanguageDropdown.addEventListener("change", () => {
 });
 
 
-/*
+
 function translateText(text, targetLanguage) {
     if (text.trim() === '') {
         // Handle empty text input (e.g., when starting the application)
@@ -87,7 +87,8 @@ function translateText(text, targetLanguage) {
     .catch((error) => {
         console.error('Translation error:', error);
     });
-}*/
+}
+/*
 function translateText(text, targetLanguage) {
     if (text.trim() === '') {
         // Handle empty text input (e.g., when starting the application)
@@ -116,7 +117,7 @@ function translateText(text, targetLanguage) {
         },
     });
 
-}
+}*/
 
 let isRecording = false; // Add this variable to track recording state
 let latestSentence = ''; // Variable to store the latest sentence
